@@ -1,0 +1,13 @@
+# Rails application generated files
+simple_rails_app/log/
+simple_rails_app/tmp/
+simple_rails_app/db/*.sqlite3
+simple_rails_app/config/master.key
+simple_rails_app/public/assets/
+
+# General development files
+*.swp
+*.swo
+.DS_Store
+.vscode/
+.idea/

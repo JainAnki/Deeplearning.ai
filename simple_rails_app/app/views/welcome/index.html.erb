@@ -1,0 +1,78 @@
+<div class="welcome-container">
+  <h1>Welcome to Our Simple Rails App!</h1>
+  <p>This is a simple Ruby on Rails web application created for the Deeplearning.ai repository.</p>
+  
+  <div class="features">
+    <h2>Features:</h2>
+    <ul>
+      <li>Ruby on Rails 8.0.2</li>
+      <li>Simple MVC structure</li>
+      <li>Welcome controller and view</li>
+      <li>Modern Rails conventions</li>
+    </ul>
+  </div>
+  
+  <div class="info">
+    <p><strong>Current Time:</strong> <%= Time.current.strftime("%B %d, %Y at %I:%M %p") %></p>
+    <p><strong>Ruby Version:</strong> <%= RUBY_VERSION %></p>
+    <p><strong>Rails Version:</strong> <%= Rails.version %></p>
+    <p><strong>Your Visit Count:</strong> <%= @visitor_count %></p>
+    <% if @last_visit && @visitor_count > 1 %>
+      <p><strong>Last Visit:</strong> <%= @last_visit.strftime("%B %d, %Y at %I:%M %p") %></p>
+    <% end %>
+  </div>
+</div>
+
+<style>
+  .welcome-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+  }
+  
+  .features {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  .info {
+    background-color: #e8f4fd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  li:before {
+    content: "✓";
+    color: #27ae60;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+</style>
